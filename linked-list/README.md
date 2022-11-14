@@ -50,3 +50,18 @@ while head.as_mut()?.next.is_some() {
 let next_node = node.next.take()
 ```
 
+#### ulti测试函数之vec2List
+
+```rust
+// 反着创建会比较方便，正好返回尾节点就是头节点
+pub fn vec2list<T>(testvec: Vec<i32>) -> Node {
+    let mut head = None;
+    for item in testvec.into_iter().rev() {
+        let mut node = ListNode::new(item);
+        node.next = head;
+        head = Some(Box::new(node));
+    }
+    head
+}
+```
+
