@@ -54,7 +54,7 @@ let next_node = node.next.take()
 
 ```rust
 // 反着创建会比较方便，正好返回尾节点就是头节点
-pub fn vec2list<T>(testvec: Vec<i32>) -> Node {
+pub fn vec2list(testvec: Vec<i32>) -> Option<Box<List>> {
     let mut head = None;
     for item in testvec.into_iter().rev() {
         let mut node = ListNode::new(item);
