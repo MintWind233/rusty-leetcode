@@ -3,6 +3,7 @@ pub mod linked_list {
     type NodePtr = Option<Box<ListNode>>;
 
     // standard Leetcode struct
+    #[derive(PartialEq, Eq, Debug, Clone)]
     pub struct ListNode {
         pub val: i32,
         pub next: NodePtr,
