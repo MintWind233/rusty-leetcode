@@ -1,5 +1,15 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+use ulti::linked_list::*;
+use std::collections::Bound;
+
+pub struct Solution;
+
+impl Solution {
+    pub fn merge_two_lists(list1: Option<Box<ListNode>>, list2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+        lmatch (list1, list2) => {
+            ()
+        }
+        res
+    }
 }
 
 #[cfg(test)]
@@ -7,8 +17,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+    fn it_works() {}
 }
